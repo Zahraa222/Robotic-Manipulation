@@ -1,0 +1,2 @@
+beginner_hiwonder
+-DCATKIN_DEVEL_PREFIX=/home/zahraa/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/zahraa/catkin_ws/install -G Unix Makefiles
