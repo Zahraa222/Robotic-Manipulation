@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # coding=utf8
-# Date:2022/05/30
+
 import sys
 import cv2
 import time
