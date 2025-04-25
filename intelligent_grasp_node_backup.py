@@ -123,7 +123,7 @@ def move():
                 bus_servo_control.set_servos(joints_pub, 1000, ((3, servo_data['servo3']), (4, servo_data['servo4']),
                                                                 (5, servo_data['servo5']), (6, x_dis)))
             rospy.sleep(1.5)
-            bus_servo_control.set_servos(joints_pub, 500, ((1, 350),)) # 闭合机械爪
+            bus_servo_control.set_servos(joints_pub, 500, ((1, 350),)) # Close jaw. Note: 450 was changed to 350
             rospy.sleep(0.8)
             
             bus_servo_control.set_servos(joints_pub, 1500, ((1, 450), (2, 500), (3, 80), (4, 825), (5, 625), (6, 500))) #机械臂抬起来
@@ -134,7 +134,7 @@ def move():
                 servo_data = target[1]
                 bus_servo_control.set_servos(joints_pub, 1200, ((6, servo_data['servo6']),)) # 机械臂先转过去
                 rospy.sleep(1)
-                bus_servo_control.set_servos(joints_pub, 1500, ((3, servo_data['servo3']), (4, servo_data['servo4']), (5, servo_data['servo5']))) # 再放下了
+                bus_servo_control.set_servos(joints_pub, 1500, ((3, servo_data['servo3'] - 50), (4, servo_data['servo4'] + 1), (5, servo_data['servo5']))) # Added an offset of -50 to y, and 1 to x
             rospy.sleep(1.8)
 
             bus_servo_control.set_servos(joints_pub, 500, ((1, 150),))  #张开机械爪
