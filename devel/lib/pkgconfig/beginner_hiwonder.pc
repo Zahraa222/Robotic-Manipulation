@@ -1,8 +1,0 @@
-prefix=/home/zahraa/catkin_ws/devel
-
-Name: beginner_hiwonder
-Description: Description of beginner_hiwonder
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
